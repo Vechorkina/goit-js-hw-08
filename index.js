@@ -35,12 +35,14 @@ function onGalleryItemClick(event) {
   modalImg.alt = event.target.description;
   modalEl.classList.add('is-open');
 }
+
 //Открытие модального окна по клику на элементе галереи.
 const modalCloseBtn = document.querySelector(
   'button[data-action="close-lightbox"]',
 );
-//Закрытие модального окна по клику на кнопку button[data - action= "close-modal"].
 
+
+//Закрытие модального окна по клику на кнопку button[data - action= "close-modal"].
 modalCloseBtn.addEventListener('click', onModalCloseBtnClick);
 function onModalCloseBtnClick() {
   modalEl.classList.remove('is-open');
@@ -58,6 +60,7 @@ function onOverlayClick(event) {
     onModalCloseBtnClick();
   }
 }
+
 //Закрытие модального окна по нажатию клавиши ESC.
 function onEscPress(event) {
   if (event.code === 'Escape') {
